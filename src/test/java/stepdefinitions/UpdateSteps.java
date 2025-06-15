@@ -29,7 +29,7 @@ public class UpdateSteps {
 
     }
 
-    @Then("the seoid in the file should be new entered one")
+    @Then("the seoid in the file should be {string}")
     public void verifyEmail(String expectedSeoid) throws IOException {
         Map<String, Object> updatedData = mapper.readValue(file, Map.class);
         assertEquals(expectedSeoid, updatedData.get("seoid"));
